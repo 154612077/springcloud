@@ -1,6 +1,7 @@
 package com.feign.method;
 
 import com.feign.entity.User;
+import com.feign.method.impl.SchedualServiceHiHystric;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * @author xzk
  */
-@FeignClient(value = "service-hi")
+@FeignClient(value = "service-hi",fallback = SchedualServiceHiHystric.class)
 public interface SchedualServiceHi {
 
     @GetMapping(value = "/hi")

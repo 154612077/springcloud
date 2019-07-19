@@ -16,6 +16,7 @@ public class HiController {
 
     @Autowired
     private SchedualServiceHi schedualServiceHi;
+
     @GetMapping(value = "/hi")
     public String sayHi(@RequestParam String name){
         System.out.println(schedualServiceHi.sayHiFromClientOne(name));
