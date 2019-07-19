@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.example</groupId>
-		<artifactId>sbdemo</artifactId>
+		<artifactId>demo</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.feign</groupId>
@@ -48,7 +48,62 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<excludes>
+					<exclude>application.properties</exclude>
+					<exclude>application-dev.properties</exclude>
+					<exclude>application-prd.properties</exclude>
+					<exclude>application-local.properties</exclude>
+					<exclude>application-test.properties</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>application-${profileActive}.properties</include>
+					<include>application.properties</include>
+				</includes>
+			</resource>
+		</resources>
 	</build>
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<packaging>war</packaging>
+				<profileActive>dev</profileActive>
+			</properties>
+		</profile>
+		<profile>
+			<id>local</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<packaging>jar</packaging>
+				<profileActive>local</profileActive>
+				<appname>blaster-local</appname>
+			</properties>
+		</profile>
+		<profile>
+			<id>prd</id>
+			<properties>
+				<packaging>war</packaging>
+				<profileActive>prd</profileActive>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<packaging>war</packaging>
+				<profileActive>test</profileActive>
+			</properties>
+		</profile>
+	</profiles>
 	<!--指定远程仓库-->
 	<repositories>
 		<repository>
