@@ -24,6 +24,6 @@ public class HiController {
         User user = new User();
         user.setName(name);
         System.out.println(schedualServiceHi.sayHello2(user));
-        return "success";
+        return "feign";
     }
 }

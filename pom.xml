@@ -17,10 +17,11 @@
 		<module>eureka-server</module>
 		<module>service-hi</module>
 		<module>service-ribbon</module>
-		<module>serice-feign</module>
+		<module>service-feign</module>
 		<module>service-zuul</module>
 	</modules>
 
+	<packaging>pom</packaging>
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.SR2</spring-cloud.version>

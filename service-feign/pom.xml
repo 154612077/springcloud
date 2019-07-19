@@ -8,10 +8,10 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.feign</groupId>
-	<artifactId>serice-feign</artifactId>
+	<artifactId>service-feign</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>serice-feign</name>
-	<description>serice-feign</description>
+	<name>service-feign</name>
+	<description>service-feign</description>
 
 	<properties>
 		<java.version>1.8</java.version>
