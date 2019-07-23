@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: service-feign
+        predicates:
+          - Path=/java/**,/web/**
+        filters:
+          - StripPrefix=1
+        uri: lb://service-feign
+      discovery:
+        locator:
+          enabled: true
+        #  uri: "http://192.168.111.133:8708/project/hello"
+server:
+  port: 9100
+eureka:
+  client:
+    serviceUrl:
+      #指向注册中心
+      defaultZone: http://localhost:8080/eureka/
