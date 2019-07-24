@@ -60,38 +60,4 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<!--<profiles>-->
-		<!--<profile>-->
-			<!--<id>dev</id>-->
-			<!--<properties>-->
-				<!--<packaging>war</packaging>-->
-				<!--<profileActive>dev</profileActive>-->
-			<!--</properties>-->
-		<!--</profile>-->
-		<!--<profile>-->
-			<!--<id>local</id>-->
-			<!--<activation>-->
-				<!--<activeByDefault>true</activeByDefault>-->
-			<!--</activation>-->
-			<!--<properties>-->
-				<!--<packaging>jar</packaging>-->
-				<!--<profileActive>local</profileActive>-->
-				<!--<appname>blaster-local</appname>-->
-			<!--</properties>-->
-		<!--</profile>-->
-		<!--<profile>-->
-			<!--<id>prd</id>-->
-			<!--<properties>-->
-				<!--<packaging>war</packaging>-->
-				<!--<profileActive>prd</profileActive>-->
-			<!--</properties>-->
-		<!--</profile>-->
-		<!--<profile>-->
-			<!--<id>test</id>-->
-			<!--<properties>-->
-				<!--<packaging>war</packaging>-->
-				<!--<profileActive>test</profileActive>-->
-			<!--</properties>-->
-		<!--</profile>-->
-	<!--</profiles>-->
 </project>

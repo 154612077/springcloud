@@ -17,7 +17,6 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -65,7 +64,6 @@
 			<properties>
 				<packaging>jar</packaging>
 				<profileActive>local</profileActive>
-				<appname>blaster-local</appname>
 			</properties>
 		</profile>
 		<profile>
