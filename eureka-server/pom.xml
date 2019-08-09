@@ -19,10 +19,10 @@
 		</dependency>
 
 
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		</dependency>-->
 	</dependencies>
 
 	<build>
@@ -58,7 +58,7 @@
 		<profile>
 			<id>dev</id>
 			<properties>
-				<packaging>war</packaging>
+				<packaging>jar</packaging>
 				<profileActive>dev</profileActive>
 			</properties>
 		</profile>
@@ -75,7 +75,7 @@
 		<profile>
 			<id>prd</id>
 			<properties>
-				<packaging>war</packaging>
+				<packaging>jar</packaging>
 				<profileActive>prd</profileActive>
 			</properties>
 		</profile>
